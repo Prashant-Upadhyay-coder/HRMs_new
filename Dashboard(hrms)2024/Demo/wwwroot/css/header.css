@@ -1,0 +1,59 @@
+﻿.header-main{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    
+}
+.header-menu-box {
+    display: flex;
+
+}
+.header-feature-box{
+    display:flex;
+    align-items:center;
+    grid-gap:1.8rem;
+}
+.header-icon{
+    width:24px;
+    height:24px;
+}
+.shift-input-box, .attendance-input-box {
+    padding: 0rem 2.4rem;
+}
+.attendance-input-box {
+    border-right: 1px solid #e7eaf3;
+}
+.header-menu-box *:focus {
+    outline: none;
+    cursor: pointer;
+}
+.header-menu-box label {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #afafaf;
+}
+    .header-menu-box input {
+        font-size: 1.6rem;
+        font-weight: 400;
+        border: none;
+    }
+.user-profile-box {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: #e7eaf3;
+    border-radius: 2rem;
+    padding:0.6rem;
+}
+
+.user-profile-image {
+    width: 28px;
+    border-radius: 50%;
+}
+.User-name{
+    font-size:1.6rem;
+    font-weight:400;
+    margin:0px;
+    color:#555
+}

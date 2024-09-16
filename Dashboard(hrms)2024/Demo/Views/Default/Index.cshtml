@@ -1,0 +1,763 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Default/MasterPage.cshtml";
+}
+<main>
+   @*Main-Dashboard*@
+    <section class="HRMS-Dashboard" id="Dashboard">
+        <div class="Information-box">
+            <h1 class="heading-primary">Dashbaord</h1>
+            <div class="Information">
+                @*chart*@
+                <div class="timestick info-card">
+                    <div class="info-header">
+                        <h2 class="heading-secondary">Attendance Status <span>- Sept,2024</span></h2>
+                        <div class="info-button">
+                            <div class="custom-select-wrapper">
+                                <select id="custom-select">
+                                    <option value="">All department</option>
+                                    <option value="1">Design</option>
+                                    <option value="2">Development</option>
+                                    <option value="3">Hr</option>
+                                    <option value="4">Sales</option>
+                                    <option value="5">Data Science</option>
+                                </select>
+                                <div class="custom-select-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3c2.755 0 5.455.232 8.083.678.533.09.917.556.917 1.096v1.044a2.25 2.25 0 0 1-.659 1.591l-5.432 5.432a2.25 2.25 0 0 0-.659 1.591v2.927a2.25 2.25 0 0 1-1.244 2.013L9.75 21v-6.568a2.25 2.25 0 0 0-.659-1.591L3.659 7.409A2.25 2.25 0 0 1 3 5.818V4.774c0-.54.384-1.006.917-1.096A48.32 48.32 0 0 1 12 3Z" />
+                                    </svg>
+
+                                </div>
+                            </div>
+                            <div class="custom-select-wrapper">
+                                <select id="custom-select">
+                                    <option value="">Jan</option>
+                                    <option value="1">Feb</option>
+                                    <option value="2">Mar</option>
+                                    <option value="3">Apr</option>
+                                    <option value="4">May</option>
+                                    <option value="5">Jun</option>
+                                    <option value="6">Jul</option>
+                                    <option value="7">Aug</option>
+                                    <option value="8">Sep</option>
+                                    <option value="9">Oct</option>
+                                    <option value="10">Nov</option>
+                                    <option value="11">Dec</option>
+                                </select>
+                                <div class="custom-select-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                    </svg>
+
+                                </div>
+                            </div>
+                            <div class="custom-select-wrapper">
+                                <select id="custom-select">
+                                    <option value="">01</option>
+                                    <option value="1">02</option>
+                                    <option value="2">03</option>
+                                    <option value="3">04</option>
+                                    <option value="4">05</option>
+                                    <option value="5">06</option>
+                                    <option value="6">07</option>
+                                    <option value="7">08</option>
+                                    <option value="8">09</option>
+                                    <option value="9">10</option>
+                                    <option value="10">11</option>
+                                    <option value="11">12</option>
+                                </select>
+                                <div class="custom-select-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                    </svg>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-chart">
+                        <div id="chart"></div>
+                    </div>
+                </div>
+
+                @*All department scroll*@
+                <div class="statistic ">
+                    <h2 class="heading-secondary ">All Departments</h2>
+                    <div class="scrollable-container">
+
+                        <div class="info-card-statistic">
+                            <div class="card-main">
+                                <div class="card-left">
+                                    <p class="card-info-title">Total</p>
+
+                                    <p class="card-number">23</p>
+                                </div>
+                                <div class="card-right">
+                                    <div class="right-titles">
+                                        <p class="right-info-title">On-Time</p>
+                                        <p class="right-info-title">Late</p>
+                                        <p class="right-info-title">Leave</p>
+                                    </div>
+                                    <div class="right-titles-count-box">
+                                        <p class="right-info-count">01</p>
+                                        <p class="right-info-count">04</p>
+                                        <p class="right-info-count">06</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card-footer-statistic">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="card-footer-icon">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.098 19.902a3.75 3.75 0 0 0 5.304 0l6.401-6.402M6.75 21A3.75 3.75 0 0 1 3 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 0 0 3.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072M10.5 8.197l2.88-2.88c.438-.439 1.15-.439 1.59 0l3.712 3.713c.44.44.44 1.152 0 1.59l-2.879 2.88M6.75 17.25h.008v.008H6.75v-.008Z" />
+                                </svg>
+
+                                <p class="footer-title">Design</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card-statistic">
+                            <div class="card-main">
+                                <div class="card-left">
+                                    <p class="card-info-title">Total</p>
+
+                                    <p class="card-number">146</p>
+                                </div>
+                                <div class="card-right">
+                                    <div class="right-titles">
+                                        <p class="right-info-title">On-Time</p>
+                                        <p class="right-info-title">Late</p>
+                                        <p class="right-info-title">Leave</p>
+                                    </div>
+                                    <div class="right-titles-count-box">
+                                        <p class="right-info-count">01</p>
+                                        <p class="right-info-count">04</p>
+                                        <p class="right-info-count">06</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card-footer-statistic">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="card-footer-icon">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
+                                </svg>
+
+                                <p class="footer-title">Development</p>
+                            </div>
+                        </div>
+                        <div class="info-card-statistic">
+                            <div class="card-main">
+                                <div class="card-left">
+                                    <p class="card-info-title">Total</p>
+
+                                    <p class="card-number">32</p>
+                                </div>
+                                <div class="card-right">
+                                    <div class="right-titles">
+                                        <p class="right-info-title">On-Time</p>
+                                        <p class="right-info-title">Late</p>
+                                        <p class="right-info-title">Leave</p>
+                                    </div>
+                                    <div class="right-titles-count-box">
+                                        <p class="right-info-count">01</p>
+                                        <p class="right-info-count">04</p>
+                                        <p class="right-info-count">06</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card-footer-statistic">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="card-footer-icon">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
+                                </svg>
+
+                                <p class="footer-title">Data Science</p>
+                            </div>
+                        </div>
+                        <div class="info-card-statistic">
+                            <div class="card-main">
+                                <div class="card-left">
+                                    <p class="card-info-title">Total</p>
+
+                                    <p class="card-number">12</p>
+                                </div>
+                                <div class="card-right">
+                                    <div class="right-titles">
+                                        <p class="right-info-title">On-Time</p>
+                                        <p class="right-info-title">Late</p>
+                                        <p class="right-info-title">Leave</p>
+                                    </div>
+                                    <div class="right-titles-count-box">
+                                        <p class="right-info-count">01</p>
+                                        <p class="right-info-count">04</p>
+                                        <p class="right-info-count">06</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card-footer-statistic">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="card-footer-icon">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z" />
+                                </svg>
+
+                                <p class="footer-title">Sales</p>
+                            </div>
+                        </div>
+                        <div class="info-card-statistic">
+                            <div class="card-main">
+                                <div class="card-left">
+                                    <p class="card-info-title">Total</p>
+
+                                    <p class="card-number">18</p>
+                                </div>
+                                <div class="card-right">
+                                    <div class="right-titles">
+                                        <p class="right-info-title">On-time</p>
+                                        <p class="right-info-title">Late</p>
+                                        <p class="right-info-title">Leave</p>
+                                    </div>
+                                    <div class="right-titles-count-box">
+                                        <p class="right-info-count">01</p>
+                                        <p class="right-info-count">04</p>
+                                        <p class="right-info-count">06</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card-footer-statistic">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="card-footer-icon">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205 3 1m1.5.5-1.5-.5M6.75 7.364V3h-3v18m3-13.636 10.5-3.819" />
+                                </svg>
+
+
+                                <p class="footer-title">HR</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="Attendance-list info-card">
+                    <div class="attendance-list-header">
+                        <h2 class="heading-secondary">Backlog(4)<span> -Sept,2024</span></h2>
+                        <a href="#" class="attendance-view">View details</a>
+                    </div>
+                    <div class="Attendance-list-container">
+                        <div class="Attendance-grid-header">
+                            <p class="Attendance-list-title">Name</p>
+                            <p class="Attendance-list-title">No days</p>
+                            <p class="Attendance-list-title">Pending hrs</p>
+                        </div>
+                        <div class="Attendance-grid-container">
+                            <div class="Attendance-grid-card">
+                                <div class="image-box">
+                                    <img src="~/images/profiles/avatar-15.jpg" alt="employe Images" />
+                                    <div class="user-text">
+                                        <p class="userprofile-name">Rajesh Patel</p>
+                                        <p class="userprofile-roll">Manager</p>
+                                    </div>
+
+                                </div>
+                                <p class="days-count">2</p>
+                                <p class="hrs-count">2h 25min</p>
+
+                            </div>
+                            <div class="Attendance-grid-card">
+                                <div class="image-box">
+                                    <img src="~/images/profiles/avatar-16.jpg" alt="employe Images" />
+                                    <div class="user-text">
+                                        <p class="userprofile-name">Hardik  Prajapati</p>
+                                        <p class="userprofile-roll">QA / Testing</p>
+                                    </div>
+
+                                </div>
+                                <p class="days-count">1</p>
+                                <p class="hrs-count">25min</p>
+
+                            </div>
+                            <div class="Attendance-grid-card">
+                                <div class="image-box">
+                                    <img src="~/images/profiles/avatar-17.jpg" alt="employe Images" />
+                                    <div class="user-text">
+                                        <p class="userprofile-name">Matang Bhatt</p>
+                                        <p class="userprofile-roll">QA / Manager</p>
+                                    </div>
+
+                                </div>
+                                <p class="days-count">2</p>
+                                <p class="hrs-count">5min</p>
+
+                            </div>
+                            <div class="Attendance-grid-card">
+                                <div class="image-box">
+                                    <img src="~/images/profiles/avatar-03.jpg" alt="employe Images" />
+                                    <div class="user-text">
+                                        <p class="userprofile-name">Janki Darji</p>
+                                        <p class="userprofile-roll">Software Engineer</p>
+                                    </div>
+
+                                </div>
+                                <p class="days-count">1</p>
+                                <p class="hrs-count">45min</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="Record info-card">
+
+                    <img src="~/images/rafiki.png" alt="employee add" width="200" height="160" />
+
+                    <div class="record-add-profile">
+                        <p class="record-add-profile-text">Add New Profile</p>
+                        <a href="#" onclick="AddUser()">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="blue" width="28" height="28">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="Information-all">
+            <header class="Information-header">
+                <div class="custom-select-wrapper">
+                    <select id="custom-select" style="border:none; font-weight:500">
+                        <option value="">Select Department</option>
+                        <option value="1">Design</option>
+                        <option value="2">Development</option>
+                        <option value="3">Hr</option>
+                        <option value="4">Sales</option>
+                        <option value="5">Data Science</option>
+                    </select>
+                    <div class="custom-select-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                        </svg>
+                    </div>
+                </div>
+            </header>
+            <nav>
+                <ul class="information-items">
+                    <li>
+                        <a href="#" class="information-item">Logged in</a>
+                        <span>(118)</span>
+                    </li>
+                    <li><a href="#" class="information-item">On Time </a><span>(180)</span></li>
+                    <li><a href="#" class="information-item">Late</a><span>(03)</span></li>
+                </ul>
+            </nav>
+            <div class="Information-all-container">
+                <div class="Information-all-Search">
+                    <div class="search-container">
+                        <input type="text" placeholder="Search...">
+                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </div>
+                    <a href="#" class="Information-Search-view " onclick="Info_Table()">View all employee</a>
+
+                </div>
+                <div class="Information-profile">
+                    <div class="profile-card">
+                        <div class="profile-left">
+                            <img src="~/images/profiles/avatar-01.jpg" alt="employee-profile" />
+                            <div class="profile-text">
+                                <p class="profile-name">Jeel Gajar</p>
+                                <p class="profile-roll">Software Engineer |<span> Regular</span></p>
+                                <p class="profile-Login">Login - 9.18</p>
+                                <p class="profile-Logout">Logout - 6.18</p>
+                            </div>
+                        </div>
+                        <div class="profile-Right">
+                            <div class="Late"></div>
+                            <p class="profile-late">Late</p>
+                        </div>
+                    </div>
+                    <div class="profile-card">
+                        <div class="profile-left">
+                            <img src="~/images/profiles/avatar-02.jpg" alt="employee-profile" />
+                            <div class="profile-text">
+                                <p class="profile-name">Hardik Patel</p>
+                                <p class="profile-roll">Software Engineer |<span> Regular</span></p>
+                                <p class="profile-Login">Login - 9.18</p>
+                                <p class="profile-Logout">Logout - 6.18</p>
+                            </div>
+                        </div>
+                        <div class="profile-Right">
+                            <div class="Late"></div>
+                            <p class="profile-late">Late</p>
+                        </div>
+                    </div>
+                    <div class="profile-card">
+                        <div class="profile-left">
+                            <img src="~/images/profiles/avatar-03.jpg" alt="employee-profile" />
+                            <div class="profile-text">
+                                <p class="profile-name">Janki Darji</p>
+                                <p class="profile-roll">Software Engineer |<span> Regular</span></p>
+                                <p class="profile-Login">Login - 9.18</p>
+                                <p class="profile-Logout">Logout - 6.18</p>
+                            </div>
+                        </div>
+                        <div class="profile-Right">
+                            <div class="Ontime"></div>
+                            <p class="profile-late">Ontime</p>
+                        </div>
+                    </div>
+                    <div class="profile-card">
+                        <div class="profile-left">
+                            <img src="~/images/profiles/avatar-04.jpg" alt="employee-profile" />
+                            <div class="profile-text">
+                                <p class="profile-name">Akshita Patel</p>
+                                <p class="profile-roll">Software Engineer |<span> Regular</span></p>
+                                <p class="profile-Login">Login - 9.18</p>
+                                <p class="profile-Logout">Logout - 6.18</p>
+                            </div>
+                        </div>
+                        <div class="profile-Right">
+                            <div class="Ontime"></div>
+                            <p class="profile-late">Ontime</p>
+                        </div>
+                    </div>
+                    <div class="profile-card">
+                        <div class="profile-left">
+                            <img src="~/images/profiles/avatar-05.jpg" alt="employee-profile" />
+                            <div class="profile-text">
+                                <p class="profile-name">Prashant Upadhyay</p>
+                                <p class="profile-roll">Software Engineer |<span> Regular</span></p>
+                                <p class="profile-Login">Login - 9.18</p>
+                                <p class="profile-Logout">Logout - 6.18</p>
+                            </div>
+                        </div>
+                        <div class="profile-Right">
+                            <div class="Ontime"></div>
+                            <p class="profile-late">Ontime</p>
+                        </div>
+                    </div>
+                    <div class="profile-card">
+                        <div class="profile-left">
+                            <img src="~/images/profiles/avatar-06.jpg" alt="employee-profile" />
+                            <div class="profile-text">
+                                <p class="profile-name">Krishna Desai</p>
+                                <p class="profile-roll">Software Engineer |<span> Regular</span></p>
+                                <p class="profile-Login">Login - 9.18</p>
+                                <p class="profile-Logout">Logout - 6.18</p>
+                            </div>
+                        </div>
+                        <div class="profile-Right">
+                            <div class="Late"></div>
+                            <p class="profile-late">Late</p>
+                        </div>
+                    </div>
+                    <div class="profile-card">
+                        <div class="profile-left">
+                            <img src="~/images/profiles/avatar-07.jpg" alt="employee-profile" />
+                            <div class="profile-text">
+                                <p class="profile-name">Vrunda Choksi</p>
+                                <p class="profile-roll">Software Engineer |<span> Regular</span></p>
+                                <p class="profile-Login">Login - 9.18</p>
+                                <p class="profile-Logout">Logout - 6.18</p>
+                            </div>
+                        </div>
+                        <div class="profile-Right">
+                            <div class="Late"></div>
+                            <p class="profile-late">Late</p>
+                        </div>
+                    </div>
+                    <div class="profile-card">
+                        <div class="profile-left">
+                            <img src="~/images/profiles/avatar-08.jpg" alt="employee-profile" />
+                            <div class="profile-text">
+                                <p class="profile-name">Isha Desai</p>
+                                <p class="profile-roll">Software Engineer |<span> Regular</span></p>
+                                <p class="profile-Login">Login - 9.18</p>
+                                <p class="profile-Logout">Logout - 6.18</p>
+                            </div>
+                        </div>
+                        <div class="profile-Right">
+                            <div class="Late"></div>
+                            <p class="profile-late">Late</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    @*---------------Addusers-------------*@
+    <section class="adduser" id="AddUSers" style="display:none;">
+        <div class="info-card p-0">
+            <header class="adduser-header ">
+                <h4>Add New Profile</h4>
+                <a href="#" onclick="closeuser()">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="25" height="25">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
+                </a>
+            </header>
+
+            <div class="adduser-container">
+                <div class="adduser-profile">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="Adduser-camera">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.827 6.175A2.31 2.31 0 0 1 5.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 0 0-1.134-.175 2.31 2.31 0 0 1-1.64-1.055l-.822-1.316a2.192 2.192 0 0 0-1.736-1.039 48.774 48.774 0 0 0-5.232 0 2.192 2.192 0 0 0-1.736 1.039l-.821 1.316Z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12.75a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0ZM18.75 10.5h.008v.008h-.008V10.5Z" />
+                        </svg>
+                    </a>
+
+                    <img src="~/images/profiles/avatar-17.jpg" alt="user Images" width="74" height="74" />
+                </div>
+                <form>
+                    <div class="adduser-input" id="First-input">
+
+                        <div class="User-input-box">
+                            <div class="user-form">
+                                <label for="FirstName">First Name</label>
+                                <input type="text" name="FirstName" id="FirstName" />
+                            </div>
+                            <div class="user-form">
+                                <label for="LastName">Last Name</label>
+                                <input type="text" name="LastName" id="LastName" />
+                            </div>
+                            <div class="user-form">
+                                <label for="Email">Email</label>
+                                <input type="text" name="Email" id="Email" />
+                            </div>
+                            <div class="user-form">
+                                <label for="MobileNumber">Mobile Number</label>
+                                <input type="text" name="MobileNumber" id="MobileNumber" />
+                            </div>
+                            <div class="user-form">
+                                <label for="DOB">DOB</label>
+                                <input type="text" name="DOB" id="DOB" />
+                            </div>
+                            <div class="user-form">
+                                <label for="BloodGroup">Blood Group</label>
+                                <input type="text" name="BloodGroup" id="BloodGroup" />
+                            </div>
+                            <div class="user-form">
+                                <label for="Country">Country</label>
+                                <select name="Country" id="Country">
+                                    <option value="0">India</option>
+                                    <option value="0">Turkey</option>
+                                    <option value="0">Germany</option>
+                                    <option value="0">Saudi Arabia</option>
+                                    <option value="0">Brazil</option>
+                                    <option value="0">Colombia</option>
+                                </select>
+                            </div>
+                            <div class="user-form">
+                                <label for="State">State</label>
+                                <select name="State" id="State">
+                                    <option value="0">Orissa</option>
+                                    <option value="0">Gujarat</option>
+                                    <option value="0">Delhi</option>
+                                    <option value="0">Madhya Pradesh</option>
+                                    <option value="0">Maharashtra</option>
+                                    <option value="0">Tripura</option>
+                                </select>
+                            </div>
+                            <div class="user-form">
+                                <label for="EmployeeType">Employee Type</label>
+                                <select name="EmployeeType" id="EmployeeType">
+                                    <option value="0">Regular</option>
+                                    <option value="0">Trainee</option>
+                                    <option value="0">Conformed</option>
+                                </select>
+                            </div>
+                            <div class="end-box" style="display:flex;grid-gap:1.2rem;">
+                                <div class="user-form">
+                                    <label for="JoiningDate">Joining Date</label>
+                                    <input type="date" name="JoiningDate" id="JoiningDate" />
+                                </div>
+                                <div class="user-form">
+                                    <label for="EmployeeID">Employee ID</label>
+                                    <input type="text" name="EmployeeID" id="EmployeeID" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="adduser-footer">
+                            <button type="button" class="BTN" onclick="Nextinput()">NEXT</button>
+                        </div>
+                    </div>
+
+                    <div class="adduser-input" id="Next-input" style="display:none;">
+                        <div class="User-input-box">
+                            <div class="user-form">
+                                <label for="Designation">Designation</label>
+                                <input type="text" name="Designation" id="Designation" />
+                            </div>
+                            <div class="user-form">
+                                <label for="Department">Department</label>
+                                <input type="text" name="Department" id="Department" />
+                            </div>
+                            <div class="user-form">
+                                <label for="Team">Team</label>
+                                <input type="text" name="Team" id="Team" />
+                            </div>
+                            <div class="user-form">
+                                <label for="MobileNumber">Experience</label>
+                                <select name="Experience" id="Experience">
+                                    <option value="0">Freshers</option>
+                                    <option value="0">1+ Years</option>
+                                    <option value="0">2+ Years</option>
+                                </select>
+
+                            </div>
+                        </div>
+
+                        <div class="Qualification">
+                            <h4 class="heading-Qulification">Qualification</h4>
+                            <div class="User-input-box">
+                                <div class="user-form">
+                                    <label for="Designation">University / College</label>
+                                    <input type="text" name="Designation" id="Designation" />
+                                </div>
+                                <div class="user-form">
+                                    <label for="Department">Highest Qualification</label>
+                                    <input type="text" name="Department" id="Department" />
+                                </div>
+                                <div class="user-form">
+                                    <label for="Team">Grade</label>
+                                    <input type="text" name="Team" id="Team" />
+                                </div>
+                                <div class="end-box" style="display:flex;grid-gap:1.2rem;">
+                                    <div class="user-form">
+                                        <label for="StartDate">Start Date</label>
+                                        <input type="date" name="StartDate" id="StartDate" />
+                                    </div>
+                                    <div class="user-form">
+                                        <label for="EndDate">End Date</label>
+                                        <input type="date" name="EndDate" id="EndDate" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="adduser-footer">
+                            <div class="adduser-footer-btn">
+                                <button type="button" class="BTN" onclick="backinput()">Back</button>
+                                <button type="button" class="BTN" onclick="closeuser()">Save</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </section>
+    @*---------------Addusers-------------*@
+
+    <section id="Info_Table_Employee" style="display:none;">
+        <div class="Information-box">
+            <h1 class="heading-primary">Dashbaord / Attendance List</h1>
+            <div class="info-card">
+                <h1>Table</h1>
+            </div>
+        </div>
+        
+    </section>
+
+</main>
+
+<script>
+
+    function AddUser() {
+        $('#Dashboard').hide();
+        $('#AddUSers').show();
+    }
+    function closeuser() {
+        $('#Dashboard').show();
+        $('#First-input').show();
+        $('#AddUSers').hide();
+        $('#Next-input').hide();
+    }
+
+    function Nextinput(){
+        $('#Next-input').show();
+        $('#First-input').hide();
+    }
+    function backinput(){
+        $('#Next-input').hide();
+        $('#First-input').show();
+    }
+    function Info_Table() {
+        $('#Info_Table_Employee').show();
+        $('#Dashboard').hide();
+    }
+    
+    document.addEventListener("DOMContentLoaded", function () {
+        var options = {
+            series: [{
+                name: 'On Time',
+                data: [44, 55, 57, 56, 61, 58, 63]
+            }, {
+                name: 'Late',
+                data: [76, 85, 101, 98, 87, 105, 91]
+            }],
+            chart: {
+                type: 'bar',
+                height: 210,
+                toolbar: {
+                    show: false // Remove the toolbar
+                }
+            },
+            plotOptions: {
+                bar: {
+                    horizontal: false,
+                    columnWidth: '55%',
+                    endingShape: 'rounded'
+                }
+            },
+            dataLabels: {
+                enabled: false
+            },
+            stroke: {
+                show: true,
+                width: 2,
+                colors: ['transparent']
+            },
+            xaxis: {
+                categories: ['1-Mon', '2-Tue', '3-Wed', '4-Thu', '5-Fri', '6-Sat', '7-Sun']
+            },
+            yaxis: {
+                title: {
+                    show: false,
+                }
+            },
+            fill: {
+                opacity: 1
+            },
+            colors: ['#283f8f', '#9faacd'], 
+            tooltip: {
+                y: {
+                    formatter: function (val) {
+                        return val; 
+                    }
+                }
+            },
+            legend: {
+                position: 'top', // Position legend at the top
+                horizontalAlign: 'right', // Center align the legend horizontally
+                floating: true, // Make sure the legend is not floating
+                offsetY: 0 // Adjust the offset as needed
+            },
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+    });
+
+    
+</script>
+
